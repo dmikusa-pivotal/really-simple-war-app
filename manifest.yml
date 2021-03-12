@@ -1,0 +1,12 @@
+---
+applications:
+- name: really-simple-war
+  memory: 256M
+  path: war
+  buildpacks:
+  - java_buildpack_offline
+  routes:
+  - route: really-simple-war.apps.pcfone.io
+  env:
+    JAVA_OPTS: '-Djava.security.egd=file:///dev/urandom -Xss256k -XX:ReservedCodeCacheSize=48M -Xmx100M'
+    JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 11.+ }}'
