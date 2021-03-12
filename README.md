@@ -9,4 +9,6 @@ The app just serves up some static content, but that can often be enough for a d
 1. [Optional] Edit `manifest.yml` and update the route.
 2. Run `cf push`.
 
+There is nothing to build or compile.
+
 The app should deploy & you should see Tomcat installed by the Java buildpack. Accessing the application should result in the bundled static resources being accessible.
